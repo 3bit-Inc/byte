@@ -9,6 +9,8 @@ import {searchYummly} from './lib/searchYummly.js';
 import SAMPLE_DATA from './data/SAMPLE_DATA.js';
 import { Jumbotron } from 'react-bootstrap';
 import NavBar from './components/NavBar.jsx';
+import { Parallax } from 'react-parallax';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -30,11 +32,9 @@ class App extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: '/users',
+      url: '/users_recipes',
       success: (data) => {
-        this.setState({
-          items: data
-        })
+        console.log('WHAT: ', data);
       },
       error: (err) => {
         console.log('err', err);
@@ -46,7 +46,7 @@ class App extends React.Component {
     e.preventDefault();
     console.log('QUERY STATE: ', this.state.query);
     var options = {};
-    options.ingredients = this.state.query.split(", ")
+    options.ingredients = this.state.query.split(",")
     searchYummly(options, (matches) => {
       console.log('API Data: ', matches);
       this.setState({data: matches});
@@ -54,14 +54,19 @@ class App extends React.Component {
   }
 
   bootstrapView() {
-    return <div className="container">
+    return (
+    <div>
       <NavBar />
-      <Jumbotron>
-        <h1>Hello world!</h1>
-      </Jumbotron>
-      <Search clickHandler={this.onClickHandler} setStore={this.setStore}/>
-      <RecipeList_Test data={this.state.data} />
-    </div>
+      <Parallax className="main-card" bgImage="http://chicago-woman.com/downloads/4988/download/Pantry%20Essentails-%20High%20Res.jpeg?cb=e59f0a5326ccffaeddcad2f813efb9ad" strength={400}>
+        <div>
+          <h1 className="subtitle"><br/>Why run to the grocery store when you have all the ingredients you need at home? Here at Byte, we help you see the potential of your pantry.</h1>
+        </div>
+      </Parallax>
+      <div className="container">
+        <Search clickHandler={this.onClickHandler} setStore={this.setStore}/>
+        <RecipeList_Test data={this.state.data} />
+      </div>
+    </div>);
   }
 
   testComponents() {

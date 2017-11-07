@@ -27,6 +27,10 @@
     "react": "^15.6.2",
     "react-bootstrap": "^0.31.5",
     "react-dom": "^15.6.2",
-    "reactstrap": "^5.0.0-alpha.3"
+    "react-icons": "^2.2.7",
+    "react-parallax": "^1.5.0",
+    "react-tag-input": "^4.7.2",
+    "reactstrap": "^5.0.0-alpha.3",
+    "knex": "^0.8.6"
   }
 }
