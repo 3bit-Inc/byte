@@ -3,7 +3,6 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
 
-var pantry = require('../database-mysql');
 var Recipes = require('../database-mysql/knexRecipes.js')
 var Users = require('../database-mysql/knexUsers.js')
 
@@ -53,7 +52,7 @@ app.get('/users_recipes', function(req, res) {
   })
   .catch( (err) => {
     console.log('User_Recipes error: ', err);
-    res.staus(500).end()
+    res.status(500).end()
   })
 });
 

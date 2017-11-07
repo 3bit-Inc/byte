@@ -11,6 +11,7 @@ Recipes.getRecipes = (data) => {
 }
 
 Recipes.getUsersRecipes = (data) => {
+  console.log('USER RECIPES');
   return knex.select().from('user_recipes');
 }
 

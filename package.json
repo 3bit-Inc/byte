@@ -30,8 +30,7 @@
     "react-icons": "^2.2.7",
     "react-parallax": "^1.5.0",
     "react-tag-input": "^4.7.2",
-    "reactstrap": "^5.0.0-alpha.3"
+    "reactstrap": "^5.0.0-alpha.3",
     "knex": "^0.8.6"
-
   }
 }
