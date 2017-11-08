@@ -36,15 +36,6 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    $.ajax({
-      url: '/users_recipes',
-      success: (data) => {
-        console.log('WHAT: ', data);
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
   }
 
   setStore(state) {
