@@ -1,5 +1,5 @@
 import React from 'react';
-import RecipeEntry_Test from './RecipeEntry_Test.jsx';
+import RecipeEntry from './RecipeEntry.jsx';
 
 export default class RecipeRows_Test extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class RecipeRows_Test extends React.Component {
     var arr = [];
     for (var n = this.props.row * 3; n < this.props.row * 3 + 3; n++) {
       if (this.props.data[n] !== undefined) {
-        arr.push(<RecipeEntry_Test key={n} data={this.props.data[n]} />);
+        arr.push(<RecipeEntry key={n} data={this.props.data[n]} />);
       }
     }
     return <span>{arr}</span>;

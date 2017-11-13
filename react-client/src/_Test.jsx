@@ -37,13 +37,12 @@ export default class _Test extends React.Component {
         this.setState({username: username});
       },
       error: (err) => {
-        console.log('err', err);
+        console.error('Error: Cannot submit login credentials to server.', err);
       }
     });
   }
 
   buttonAction(url) {
-    console.log('I\'m being pressed!');
     $.ajax({
       url: url,
       success: (data) => {

@@ -1,20 +1,61 @@
 body {
   font-size: 16px;
   background-color: white;
+  overflow-x: hidden;
+  font-family: "Roboto";
 }
 
-.recipe-list {
-  max-width: 100%;
+a {
+  color: #2d2d2d;
 }
 
-.recipe-entry {
+a:hover {
+  color: #707070;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2d2d2d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #707070;
+  text-decoration: none;
+}
+
+a:active {
+  color: #707070;
+  text-decoration: none;
+}
+
+.img-hover {
+  opacity: 0.75;
+}
+
+.img-hover:hover {
+  opacity: 1;
+}
+
+.main-card {
+  top: 1em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  width: 100%;
+  height: 100vh;
+  padding: 0% 10% 0% 10%;
+}
+
+.loading-text {
+  font-family: "Rozha One", serif;
   text-align: center;
-  border: 1px red solid;
-  padding: 2em;
-  display: inline-block;
-  width: 33%;
-  height: 33%;
-  float: top;
+  font-size: 2em;
+}
+
+.title {
+  font-family: "Rozha One", serif;
+  font-size: 2em;
 }
 
 .search {
@@ -22,5 +63,150 @@ body {
   padding: 3em;
 }
 
+.search-title {
+  font-family: "Rozha One", serif;
+  font-size: 3em;
+}
+
+.search-dropdown {
+  display: inline-block;
+}
+
+.search-input {
+  width: 50%;
+  display: inline-block;
+}
+
+.subtitle {
+  height: auto;
+  justifyContent: 'center';
+  alignItems: 'center';
+  font-family: "Oranienbaum";
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #333333;
+  font-size: 5em;
+}
+
 .container {
+  padding: 0;
+}
+
+.recipe-list {
+  max-width: 100%;
+}
+.recipe-entry {
+  padding: .5em;
+  display: inline-block;
+  width: 33%;
+
+  max-height: 10em;
+}
+
+.submission-form {
+  text-align: "center";
+  padding-top: "2em";
+  padding-bottom: "2em";
+}
+
+.recipe-title {
+  background-color: #f4f4f4;
+  font-family: "Rozha One";
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.center {
+  text-align: center;
+}
+
+.recipe-ingredients {
+  padding-left: 1em;
+}
+
+.recipe-favorite {
+  text-align: right;
+  font-size: 4em;
+}
+
+.recipe-favorite:hover {
+  text-align: center;
+  font-size: 4em;
+  color: red;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 10em;
+}
+
+.missing-ingredient {
+  color: #f46842;
+}
+
+#signup-fail {
+  color: #f46842;
+}
+
+#login-fail {
+  color: #f46842;
+}
+
+
+@media only screen and (max-width: 960px) {
+
+    [class*="col-"] {
+      width: 100%;
+    }
+    .recipe-entry {
+      width: 100%;
+    }
+
+    .subtitle {
+      font-size: 2em;
+    }
+    recipe-image {
+      height: 20em;
+    }
+
+}
+
+.input-field {
+  display: block;
+  margin: .5em;
+  margin-right: .3em;
+}
+
+.close-button {
+  float: right;
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
+
+.close-button:hover {
+  cursor: pointer;
+
+}
+
+div.ReactTags__selected span.ReactTags__tag {
+  border: 1px solid #B8B9BA;
+   border-radius: 5px;
+   background-color: transparent;
+   padding: 5px 5px 5px 10px;
+   margin: 2px;
+   display: inline-block;
+}
+
+div.ReactTags__tagInput input.ReactTags__tagInputField {
+    height: 31px;
+    margin: 0;
+    font-size: 12px;
+    width: 100%;
+    border: 1px solid #eee;
+}
+div.ReactTags__tagInput {
+    width: 200px;
+    border-radius: 2px;
+    display: inline-block;
 }

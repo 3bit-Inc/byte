@@ -3,12 +3,6 @@
 
 > Enter ingredients from your pantry and retrieve recipes you can make from those ingredients. See the potential in your pantry. What's in your pantry?
 
-## Team
-
-  - __Product Owner__: Ross Salge
-  - __Scrum Master__: Ceci Goss
-  - __Development Team Members__: Tim Ninan
-
 ## Table of Contents
 
 1. [Usage](#Usage)
@@ -21,13 +15,17 @@
 
 ## Usage
 
-> Some usage instructions
+> Search for recipes to use with the ingredients you have on hand
 
 ## Requirements
 
 - Node 0.10.x
-- etc
-- etc
+- React
+- bcrypt
+- jquery
+- mysql
+- knex
+
 
 ## Development
 
@@ -59,11 +57,17 @@ To make SQL queries within the database, run:
 mysql -u root -p
 ```
 
-Password is 'password'
+Password is specific to your machine for the "root" user
+insert this password into database-mysql/knexSetup.js line 6
 
 ### Roadmap
 
-View the project roadmap [here](LINK_TO_PROJECT_ISSUES)
+View the project waffle https://waffle.io/cgoss95/hratx30-greenfield
+
+## Team
+  - __Product Owner__: Ross Salge
+  - __Scrum Master__: Ceci Goss
+  - __Development Team Members__: Tim Ninan
 
 
 ## Contributing

@@ -1,4 +1,6 @@
-$.ajaxPrefilter(function (settings, _, jqXHR) {
-  jqXHR.setRequestHeader('X-Parse-Application-Id', 'PARSE_APP_ID');
-  jqXHR.setRequestHeader('X-Parse-REST-API-Key', 'PARSE_API_KEY');
-});
+var Keys = {}
+
+Keys.APP_ID = '6dc42c37'
+Keys.APP_KEY = '4c35e386c8a9c936f0c5c16e72eb841a'
+
+module.exports = Keys;
